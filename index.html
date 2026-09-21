@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Detect and Humanize</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-tap-highlight-color:transparent}
 
@@ -469,6 +472,10 @@
 <div class="toast" id="toast">Falls der Tab nicht geöffnet wurde, erlaube bitte Pop-ups.</div>
 
 <script>
+  /* ========= START AT TOP ========= */
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+
   /* ========= SPLASH ========= */
   const word = "AI DETECT AND HUMANIZE";
   const splashWord = document.getElementById("splashWord");
@@ -498,6 +505,7 @@
       setTimeout(() => {
         splash.classList.add("hide");
         document.getElementById("nav").classList.add("show");
+        window.scrollTo(0, 0);
         main.style.opacity = "1";
         main.style.transition = "opacity .9s ease";
       }, 350);
